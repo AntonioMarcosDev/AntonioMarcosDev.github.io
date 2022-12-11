@@ -1,0 +1,125 @@
+/*Variáveis*/
+$color01: #001625;
+$color02: #EEF1EF;
+$color03: #A9B4C2;
+$color04: #7D98A1;
+$color05: #931F1D;
+
+@import 'base';
+
+
+menu {
+    align-self: flex-start;
+    z-index: 1;
+
+    #burger {
+        color: $color02;
+        font-size: 10rem;
+        cursor: pointer;
+    }
+}
+
+.side {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+    background-color: $color05;
+    height: 100vh;
+    width: 15%;
+    display: flex;
+    align-items: center;
+
+    ul {
+        li {
+            list-style: none;
+            text-align: center;
+
+            img {
+                width: 60%;
+                height: 60%;
+            }
+        }
+    }
+}
+
+
+.nome {
+    text-align: center;
+    margin: auto;
+
+    h1 {
+        font-size: 10rem;
+        letter-spacing: 1px;
+        font-weight: bolder;
+        background: url('../img/Background-Text.png');
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text 8s linear infinite;
+    }
+}
+
+@keyframes text {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    menu {
+
+        #burger {
+            font-size: 8rem;
+        }
+    }
+
+    .nome {
+
+        h1 {
+            font-size: 8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .side {
+        height: 15%;
+        width: 100vw;
+
+        ul {
+            display: flex;
+            align-items: center;
+            padding-left: 8rem;
+
+            li {
+                list-style: none;
+                text-align: center;
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    menu {
+
+        #burger {
+            font-size: 5rem;
+        }
+    }
+
+    .nome {
+
+        h1 {
+            font-size: 5rem;
+        }
+    }
+}
